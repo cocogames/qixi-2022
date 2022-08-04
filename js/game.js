@@ -1,4 +1,6 @@
-var letters = ['H', 'Y', 'X', 'I', 'L', 'O', 'V', 'E', 'U'];
+var letters = ['M', 'Y', 'I', 'L', 'O', 'V', 'E', 'U'];
+var letterNum = 8;
+var startNum = 2;
 var screen = document.getElementById("screen");
 var count = document.getElementById("score");
 var score = 0;
@@ -26,7 +28,7 @@ function create_letter() {
         var math_left = Math.round(Math.random() * 1000);
 
         //生成26以内的随机整数
-        var num = parseInt(Math.random() * 9);
+        var num = parseInt(Math.random() * letterNum);
         var inp = document.createElement("input");
         inp.value = letters[num];
         inp.className = "letter";
@@ -87,35 +89,32 @@ function key_down() {
         if(1 == inp.nodeType) {
             //判断用户按下的值和input的velue是否一致
             switch (event.keyCode) {
-                case 72:
+                case 77:
                     n = 0;
                     break;
                 case 89:
                     n = 1;
                     break;
-                case 88:
+                case 73:
                     n = 2;
                     break;
-                case 73:
+                case 76:
                     n = 3;
                     break;
-                case 76:
+                case 79:
                     n = 4;
                     break;
-                case 79:
+                case 86:
                     n = 5;
                     break;
-                case 86:
+                case 69:
                     n = 6;
                     break;
-                case 69:
+                case 85:
                     n = 7;
                     break;
-                case 85:
-                    n = 8;
-                    break;
                 default:
-                    n = 9;
+                    n = 8;
             }
             if(letters[n] == inp.value) {
                 screen.removeChild(inp);
@@ -147,8 +146,8 @@ function fall() {
             //生成下落的随机起始点
             var math_left = Math.round(Math.random() * 1000);
             //生成26以内的随机整数
-            var num = 3;
-            for(num = 3; num < 9; num++) {
+            var num = startNum;
+            for(num = startNum; num < letterNum; num++) {
                 var inp = document.createElement("input");
                 inp.value = letters[num];
                 inp.className = "letter";
@@ -156,22 +155,22 @@ function fall() {
                 inp.style.top = "0px";
                 //inp.style.left = num*200-500 + "px";
                 switch (num) {
-                    case 3:
+                    case 2:
                         inp.style.left = 100 + "px";
                         break;
-                    case 4:
+                    case 3:
                         inp.style.left = 350 + "px";
                         break;
-                    case 5:
+                    case 4:
                         inp.style.left = 500 + "px";
                         break;
-                    case 6:
+                    case 5:
                         inp.style.left = 660 + "px";
                         break;
-                    case 7:
+                    case 6:
                         inp.style.left = 820 + "px";
                         break;
-                    case 8:
+                    case 7:
                         inp.style.left = 1100 + "px";
                         break;
 
@@ -182,7 +181,7 @@ function fall() {
             sleep(2000)
                 .then(() => {
                     // 这里写sleep之后需要去做的事情
-                    for(num = 0; num < 3; num++) {
+                    for(num = 0; num < startNum; num++) {
                         var inp = document.createElement("input");
                         inp.value = letters[num];
                         inp.className = "letter";

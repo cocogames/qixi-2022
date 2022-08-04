@@ -89,32 +89,29 @@ function key_down() {
         if(1 == inp.nodeType) {
             //判断用户按下的值和input的value是否一致
             switch (event.keyCode) {
-                case 77:
+                case 88:
                     n = 0;
                     break;
-                case 89:
-                    n = 1;
-                    break;
                 case 73:
-                    n = 2;
-                    break;
-                case 76:
                     n = 3;
                     break;
-                case 79:
+                case 76:
                     n = 4;
                     break;
-                case 86:
+                case 79:
                     n = 5;
                     break;
-                case 69:
+                case 86:
                     n = 6;
                     break;
-                case 85:
+                case 69:
                     n = 7;
                     break;
-                default:
+                case 85:
                     n = 8;
+                    break;
+                default:
+                    n = 9;
             }
             if(letters[n] == inp.value) {
                 screen.removeChild(inp);

@@ -1,6 +1,6 @@
-var letters = ['M', 'Y', 'I', 'L', 'O', 'V', 'E', 'U'];
-var letterNum = 8;
-var startNum = 2;
+var letters = ['X', 'X', 'X', 'I', 'L', 'O', 'V', 'E', 'U'];
+var letterNum = 9;
+var startNum = 3;
 var screen = document.getElementById("screen");
 var count = document.getElementById("score");
 var score = 0;
@@ -155,22 +155,22 @@ function fall() {
                 inp.style.top = "0px";
                 //inp.style.left = num*200-500 + "px";
                 switch (num) {
-                    case 2:
+                    case 3:
                         inp.style.left = 100 + "px";
                         break;
-                    case 3:
+                    case 4:
                         inp.style.left = 350 + "px";
                         break;
-                    case 4:
+                    case 5:
                         inp.style.left = 500 + "px";
                         break;
-                    case 5:
+                    case 6:
                         inp.style.left = 660 + "px";
                         break;
-                    case 6:
+                    case 7:
                         inp.style.left = 820 + "px";
                         break;
-                    case 7:
+                    case 8:
                         inp.style.left = 1100 + "px";
                         break;
 

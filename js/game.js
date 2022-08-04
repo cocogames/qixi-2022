@@ -1,4 +1,4 @@
-var letters = ['M', 'Y', 'I', 'L', 'O', 'V', 'E', 'U'];
+var letters = ['H', 'Y', 'X', 'I', 'L', 'O', 'V', 'E', 'U'];
 var screen = document.getElementById("screen");
 var count = document.getElementById("score");
 var score = 0;
